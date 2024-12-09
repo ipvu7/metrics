@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Trip Bus </title>
-    <link="https://www.flaticon.com/free-icons/bus-stop" title="My Trip Bus ">
+    <title>Bus Driver Dashboard</title>
     <link rel="stylesheet" href="styl.css">
-    <script src='bus-stop.png"'></script>
     <script src="script.js" defer></script>
     <style>
         html, body {
@@ -41,17 +39,18 @@
             box-sizing: border-box;
         }
 
-        /* Styling for the student div (d1) */
+        /* Styling for the driver info div (d1) */
         #d1 {
             background-color: rgb(239, 240, 240);
             padding: 10px;
         }
 
-        /* Styling for the iframe div (o98) */
+        /* Styling for the weather iframe div (o98) */
         #o98 {
             background-color: rgb(239, 240, 240);
             padding: 10px;
         }
+
         .map-buttons {
             text-align: center;
             width: 100%;
@@ -68,7 +67,6 @@
             font-size: 16px;
         }
 
-
         /* Optional: To ensure responsive design and good layout on small screens */
         @media (max-width: 768px) {
             .container {
@@ -82,31 +80,30 @@
 
   <header>
     <div><img src="bus-stop.png" alt="logo"> 
-      <h1>My Trip Bus  </h1>
+      <h1>Bus Driver Dashboard</h1>
     </div>
     <center>
         <div>
-            <button onclick="location.href='bus.html';">exit </button>
-            <button onclick="location.href='stu.html'">home</button>
-            <button onclick="location='aboutasd.html';">about us</button>
+            <button onclick="location.href='driver-login.html';">Exit</button>
+            <button onclick="location.href='dashboard.html'">Home</button>
+            <button onclick="location='about-driver.html';">About Us</button>
         </div>
     </center>
   </header>
-  <br>
-  <br>
-  <br>
+  <br><br><br>
 
   <!-- Parent container holding map, d1, and o98 -->
   <div class="container">
       <!-- Map div -->
       <div id="map"></div>
-      
 
-      <!-- Student div (d1) -->
+      <!-- Driver information div (d1) -->
       <div id="d1">
-          <h3>Student Information</h3>
-          <img src="IMG_9514 5.png" width="270" height="370" alt="">
-          <p></p>
+          <h3>Driver Information</h3>
+          <p><strong>Bus License:</strong> XYZ-1234</p>
+          <p><strong>Current Route:</strong> Route 5</p>
+          <p><strong>Status:</strong> Active</p>
+          <img src="bus-driver-image.jpg" width="270" height="370" alt="Driver Image">
       </div>
 
       <!-- Weather iframe div (o98) -->
@@ -127,34 +124,32 @@
       }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwXBCIKpwntgoK-6y5Pmk1ErcbsajUOeU&callback=initMap" async defer></script>
-    <div class="map-buttons">
-      <button onclick="location='mapp.html';">+Add destination</button>
+
+  <div class="map-buttons">
+      <button onclick="location='add-destination.html';">+ Add Destination</button>
+      <button onclick="location='view-routes.html';">View Routes</button>
+  </div>
+
+  <button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there 👋<br>How can I assist you today?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
     </div>
-
-
-
-  
-      <button class="chatbot-toggler">
-        <span class="material-symbols-rounded">mode_comment</span>
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <div class="chatbot">
-        <header>
-          <h2>Chatbot</h2>
-          <span class="close-btn material-symbols-outlined">close</span>
-        </header>
-        <ul class="chatbox">
-          <li class="chat incoming">
-            <span class="material-symbols-outlined">smart_toy</span>
-            <p>Hi there 👋<br>How can I help you today?</p>
-          </li>
-        </ul>
-        <div class="chat-input">
-          <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-          <span id="send-btn" class="material-symbols-rounded">send</span>
-        </div>
-      </div>
-
+  </div>
 
 </body>
 </html>

@@ -5,19 +5,30 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body {
+  display: flex;
+  justify-content: center;  /* لتوسيط العنصر أفقيًا */
+  align-items: center;      /* لتوسيط العنصر عموديًا */
+  min-height: 100vh;        /* ضمان أن ارتفاع الجسم يغطي كامل الشاشة */
+  margin: 0;                /* إزالة أي هوامش افتراضية من الحواف */
+}
+
 .logo {
   width: 150px;
-  height: auto; 
-  margin: 10px auto;
-  display: block; 
+  height: auto;
+  max-height: 270px;
+  margin: 20px;             /* مسافة بسيطة بين الشعار والحواف */
+  display: block;
+  object-fit: contain;
 }
+
+
 .about-us {
-  display: flex;
   align-items: center;
   height: 100vh;
   width: 100%;
   padding: 90px 0;
-  background: #fff;
+  background: #c5d9df;
 }
 .pic {
   height: auto;
@@ -36,23 +47,25 @@
   width: 540px;
 }
 .text h2 {
-  color: #338;
+  color: #3d396e;
+  font-family: 'nunito', sans-serif;
   font-size: 80px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.text h5 {
+.text h4 {
   color: #333;
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 20px;
 }
 span {
-  color: #4070f4;
+  color: #c5d9df;
 }
 .text p {
-  color: #333;
-  font-size: 18px;
+  color: #3d396e;
+  font-size: 20px;
+  font-family: 'roboto',sans-serif;
   line-height: 25px;
   letter-spacing: 1px;
 }
@@ -61,7 +74,7 @@ span {
 }
 .hire {
   font-size: 18px;
-  background: #4070f4;
+  background: #d9ad78;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -70,7 +83,7 @@ span {
   transition: 0.5s;
 }
 .hire:hover {
-  background: #000;
+  background: #c5d9df;
 }
    
 
